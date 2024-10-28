@@ -1,5 +1,5 @@
 {% set name = "jupyter-sshd-proxy" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyter_sshd_proxy-{{ version }}.tar.gz
-  sha256: 61e0b058590f642cc6ef13b952826a7ad3127447cb986a840b8399eba93b1cfb
+  sha256: 2d4ea167f39864fd436173860798ebd1625385e248e070bf29c96354db34543b
 
 build:
   noarch: python
@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools
   run:
     - jupyter-server-proxy >=4.3.0
     - python >=3.8
